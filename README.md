@@ -1,14 +1,19 @@
 # reboot-manager
 
-Automatically reboots a Debian/Ubuntu machine when it has been up for a set number of days.
+> [!WARNING]
+> By default, full system updates are enabled. To opt-out, run `sudo /usr/local/bin/reboot-manager sysupdate optout`.
 
-A one-shot installer writes a daily cron job that checks uptime once a day and, if the
-threshold is reached, announces a reboot over `wall` and schedules it one minute later.
+---
+
+Automatically reboots a Debian/Ubuntu machine when it has been up for a set number of days and updates it if the feature has been opted in for.
+
+A one-shot installer writes a daily cron job that checks uptime once a day and, if thethreshold is reached, announces a reboot over `wall` and schedules it one minute later.
 
 
 ## Requirements
 
 - Debian-based server
+- Git
 
 
 ## Install
@@ -16,7 +21,7 @@ threshold is reached, announces a reboot over `wall` and schedules it one minute
 ```bash
 git clone https://github.com/0bi0/reboot-manager.git
 cd reboot-manager
-sudo /usr/local/bin/reboot-manager set restart X
+sudo /usr/local/bin/reboot-manager set restart <X_days>
 ```
 
 Replace `X` with the number of days of uptime you want to tolerate. Minimum is `1`.
@@ -26,6 +31,7 @@ Replace `X` with the number of days of uptime you want to tolerate. Minimum is `
 
 ```
 sudo /usr/local/bin/reboot-manager set restart <X_days>
+sudo /usr/local/bin/reboot-manager sysupdate <optin|optout>
 ```
 
 Master command, as-is; sets reboot interval.
