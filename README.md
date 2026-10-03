@@ -34,8 +34,6 @@ sudo /usr/local/bin/reboot-manager set restart <X_days>
 sudo /usr/local/bin/reboot-manager sysupdate <optin|optout>
 ```
 
-Master command, as-is; sets reboot interval.
-
 
 ## Uninstall
 

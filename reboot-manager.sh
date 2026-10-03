@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# reboot-manager.sh
-
 set -euo pipefail
 
 # Constants
@@ -196,7 +193,7 @@ cmd_sysupdate() {
     fi
 
     if [[ ! -f "${CRON_FILE}" ]]; then
-        echo "Note: no restart schedule is set yet. Run: sudo reboot-manager.sh set restart <X_days>"
+        echo "Note: no restart schedule is set yet. Run: sudo /usr/local/bin/reboot-manager set restart <X_days>"
     fi
 }
 

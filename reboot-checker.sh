@@ -1,5 +1,3 @@
-# reboot-checker.sh
-
 CONFIG_FILE="/etc/reboot-manager/config"
 LOG_FILE="/var/log/reboot-manager.log"
  
